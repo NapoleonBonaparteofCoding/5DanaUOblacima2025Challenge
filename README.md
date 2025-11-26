@@ -11,7 +11,7 @@ Sistem za rezervaciju termina za obedovanje u studentskim menzama.
 - Visual Studio Code (2022)
 - (Opcionalno: dodaj sve dodatne biblioteke koje koristiš)
 
-##Pokretanje aplikacije
+## Pokretanje aplikacije
 npm start
 
 ## Podešavanje okruženja
