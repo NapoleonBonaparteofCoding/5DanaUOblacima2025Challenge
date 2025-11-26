@@ -26,27 +26,26 @@ router.post('/canteens', (req, res) => {
     res.status(201).json(novaMenza);
 });
 
-// GET - STATUS SPECIFIČNE MENZE (dostupnost za period)
+
 router.get('/canteens/:id/status', (req, res) => {
     const { startDate, startTime, endDate, endTime, duration } = req.query;
     const canteenId = req.params.id;
     
-    // Validacija parametara
+    
     if (!startDate || !startTime || !endDate || !endTime || !duration) {
         return res.status(400).json({
             error: "Svi parametri su obavezni: startDate, startTime, endDate, endTime, duration"
         });
     }
     
-    // Pronađi menzu
+    
     const menza = menze.find(m => m.id === canteenId);
     
     if (!menza) {
         return res.status(404).json({ error: "Menza nije pronađena" });
     }
     
-    // Ovde dodajte logiku za proveru dostupnosti
-    // Za sada vraćamo jednostavan status
+    
     const status = {
         canteenId: menza.id,
         name: menza.name,
@@ -63,7 +62,7 @@ router.get('/canteens/:id/status', (req, res) => {
     res.status(200).json(status);
 });
 
-// GET /canteens (sve menze)
+
 router.get('/canteens', (req, res) => {
     res.status(200).json(menze);
 });
@@ -99,7 +98,6 @@ router.put('/canteens/:id', (req, res) => {
     
     const { name, location, capacity, workingHours } = req.body;
     
-    // Ažuriraj samo ona polja koja su poslata
     if (name !== undefined) menza.name = name;
     if (location !== undefined) menza.location = location;
     if (capacity !== undefined) menza.capacity = capacity;
@@ -122,4 +120,5 @@ router.delete('/canteens/:id', (req, res) => {
 });
 
 module.exports = router;
+
 module.exports = router;
