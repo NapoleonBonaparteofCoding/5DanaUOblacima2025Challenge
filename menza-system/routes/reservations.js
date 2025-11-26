@@ -134,7 +134,6 @@ router.post('/reservations', (req, res) => {
         time,
         duration,
         meal,
-        status: "Active" 
     };
 
     rezervacije.push(nova);
@@ -188,8 +187,11 @@ router.delete('/reservations/:id', (req, res) => {
         return res.status(404).json({ error: "Rezervacija nije pronađena" });
     }
     
-    rezervacije.splice(index, 1);
+    const obrisanaRezervacija = rezervacije.splice(index, 1)[0];
     
-    res.status(204).send(); // 204 bez body-ja
+    // Vrati samo 7 originalnih polja (bez status)
+    const { status, ...rezervacijaBezStatusa } = obrisanaRezervacija;
+    
+    res.status(200).json(rezervacijaBezStatusa);
 });
 module.exports = router;
