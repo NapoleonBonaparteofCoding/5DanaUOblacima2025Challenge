@@ -11,9 +11,18 @@ Sistem za rezervaciju termina za obedovanje u studentskim menzama.
 - Visual Studio Code (2022)
 - (Opcionalno: dodaj sve dodatne biblioteke koje koristiš)
 
+##Pokretanje aplikacije
+npm start
+
 ## Podešavanje okruženja
 1. Node.js: [https://nodejs.org/](https://nodejs.org/)
 2. Kloniraj repozitorijum:
+
 ```bash
-git clone https://github.com/username/5DanaUOblacima2025Challenge.git
+git clone [https://github.com/username/5DanaUOblacima2025Challenge.git](https://github.com/username/5DanaUOblacima2025Challenge.git)
 cd 5DanaUOblacima2025Challenge
+
+
+
+
+
