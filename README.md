@@ -8,7 +8,7 @@ Sistem za rezervaciju termina za obedovanje u studentskim menzama.
 - Node.js (verzija 20.x)
 - npm (verzija 10.x)
 - JavaScript (ES6)
-- Visual Studio (2022)
+- Visual Studio Code (2022)
 - (Opcionalno: dodaj sve dodatne biblioteke koje koristiš)
 
 ## Podešavanje okruženja
